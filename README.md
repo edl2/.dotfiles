@@ -2,7 +2,6 @@
 edl2's arch dotfiles  
 qtile  
 alacritty  
-picom  
 ncspot  
 picom  
 qutebrowser  
