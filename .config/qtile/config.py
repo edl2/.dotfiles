@@ -26,7 +26,7 @@
 
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget
+from libqtile import bar, layout, widget, extension
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -57,7 +57,7 @@ keys = [
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(),
         desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
-    
+
     # My Custom Keybindings
     Key([mod], "d", lazy.spawn("dmenu_run")),
     Key([mod], "b", lazy.spawn("qutebrowser")),
@@ -94,22 +94,24 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 ]
 
-groups = [Group(i) for i in "123456789"]
 
-for i in groups:
-    keys.extend([
-        # mod1 + letter of group = switch to group
-        Key([mod], i.name, lazy.group[i.name].toscreen(),
-            desc="Switch to group {}".format(i.name)),
+groups = (
+    Group('1', label='●', layout='monadtall'),
+    Group('2', label='●', layout='monadtall'),
+    Group('3', label='●', layout='monadtall'),
+    Group('4', label='●', layout='monadtall'),
+    Group('5', label='●', layout='monadtall'),
+    Group('6', label='●', layout='monadtall'),
+    Group('7', label='●', layout='monadtall'),
+    Group('8', label='●', layout='monadtall'),
+)
 
-        # mod1 + shift + letter of group = switch to & move focused window to group
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-            desc="Switch to & move focused window to group {}".format(i.name)),
-        # Or, use below if you prefer not to switch to that group.
-        # # mod1 + shift + letter of group = move focused window to group
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-        #     desc="move focused window to group {}".format(i.name)),
-    ])
+# Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
+# MOD4 + index Number : Switch to Group[index]
+# MOD4 + shift + index Number : Send active window to another Group
+from libqtile.dgroups import simple_key_binder
+dgroups_key_binder = simple_key_binder("mod4")
+
 
 layout_theme = {"border_width": 5,
                 "margin": 6,
@@ -117,23 +119,16 @@ layout_theme = {"border_width": 5,
                 "border_normal": BLACK
                 }
 layouts = [
-    
+
     layout.Bsp(**layout_theme),
     layout.RatioTile(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
     layout.Floating(**layout_theme),
-    #layout.Columns(),
-    # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Matrix(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    # layout.TreeTab(),
-    # layout.VerticalTile(),
-    # layout.Zoomy(),
     ]
+
 
 widget_defaults = dict(
     font='SauceCodePro Nerd Font Mono',
@@ -145,7 +140,7 @@ extension_defaults = widget_defaults.copy()
 screens = [
     Screen(
         top=bar.Bar(
-            [  
+            [
 
                 widget.Spacer(length=15),
                 widget.CurrentLayoutIcon(),
@@ -181,7 +176,6 @@ mouse = [
     Click([mod], "Button2", lazy.window.bring_to_front())
 ]
 
-dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 follow_mouse_focus = True
 bring_front_click = False
@@ -204,5 +198,4 @@ reconfigure_screens = True
 # focus, should we respect this or not?
 auto_minimize = True
 wmname = "LG3D"
-
 
