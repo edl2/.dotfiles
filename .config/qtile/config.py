@@ -148,7 +148,7 @@ screens = [
 
                 widget.Spacer(length=15),
                 widget.CurrentLayoutIcon(),
-                widget.GroupBox(this_current_screen_border=BLUE),
+                widget.GroupBox(this_current_screen_border=GREEN),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
