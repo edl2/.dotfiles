@@ -119,6 +119,7 @@ layout_theme = {"border_width": 5,
 layouts = [
     
     layout.Bsp(**layout_theme),
+    layout.RatioTile(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
     layout.Floating(**layout_theme),
