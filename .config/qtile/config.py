@@ -161,7 +161,7 @@ screens = [
                 widget.Spacer(length=10),
                 widget.Battery(format='{char} {percent:2.0%}'),
                 widget.Spacer(length=15),
-                widget.Clock(format='%m-%d-%Y %a %I:%M %p'),
+                widget.Clock(format='%d %a %I:%M %p'),
                 widget.Spacer(length=15),
             ],
             24,
