@@ -8,3 +8,5 @@ qutebrowser
 bashrc  
 xbindkeysrc  
 xinitrc  
+dmenu  
+themes  
