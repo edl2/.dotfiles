@@ -96,19 +96,15 @@ keys = [
 
 
 groups = (
-    Group('1', label='●', layout='monadtall'),
-    Group('2', label='●', layout='monadtall'),
-    Group('3', label='●', layout='monadtall'),
-    Group('4', label='●', layout='monadtall'),
-    Group('5', label='●', layout='monadtall'),
-    Group('6', label='●', layout='monadtall'),
-    Group('7', label='●', layout='monadtall'),
-    Group('8', label='●', layout='monadtall'),
+    Group('1', label='●'),
+    Group('2', label='●'),
+    Group('3', label='●'),
+    Group('4', label='●'),
+    Group('5', label='●'),
+    Group('6', label='●'),
+    Group('7', label='●'),
+    Group('8', label='●'),
 )
-
-# Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
-# MOD4 + index Number : Switch to Group[index]
-# MOD4 + shift + index Number : Send active window to another Group
 from libqtile.dgroups import simple_key_binder
 dgroups_key_binder = simple_key_binder("mod4")
 
