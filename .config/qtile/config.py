@@ -150,6 +150,7 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(),
+                widget.Spacer(length=10),
                 widget.PulseVolume(),
                 widget.Spacer(length=10),
                 widget.Battery(format='{char} {percent:2.0%}'),
