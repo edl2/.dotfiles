@@ -10,7 +10,6 @@ if [[ "$(tty)" = "/dev/tty1" ]]; then
 fi
 alias anime='cd github/ani-cli/ && ./ani-cli'
 alias sp='ncspot'
-alias yt='ytfzf -t'
 alias ..='cd ..'
 alias ls='ls --color=auto'
 alias pm='pulsemixer'
