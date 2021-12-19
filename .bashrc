@@ -16,6 +16,7 @@ alias pm='pulsemixer'
 alias neofetch='neofetch --source Pictures/ascii-art.txt'
 alias rn='ranger'
 alias matrix='unimatrix -c blue'
+alias qtile='vim .dotfiles/.config/qtile/config.py'
 S1='[\u@\h \W]\$ '
 
 
