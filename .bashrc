@@ -17,6 +17,7 @@ alias neofetch='neofetch --source Pictures/ascii-art.txt'
 alias rn='ranger'
 alias matrix='unimatrix -c blue'
 alias qtile='vim .dotfiles/.config/qtile/config.py'
+alias airpods='bluetoothctl connect 74:9E:AF:E7:E1:00'
 S1='[\u@\h \W]\$ '
 
 
