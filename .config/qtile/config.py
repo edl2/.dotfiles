@@ -29,6 +29,7 @@ keys = [
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
 
     Key([mod], "d", lazy.spawn("dmenu_run")),
+    Key([mod], "m", lazy.spawn('"/home/el/Applications/Lunar Client-2.9.3.AppImage" --no-sandbox %U')),
     Key([mod], "b", lazy.spawn("qutebrowser")),
     Key([mod], "f", lazy.spawn("pcmanfm")),
     Key([mod], "o", lazy.spawn("wps")),
