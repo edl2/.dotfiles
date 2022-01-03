@@ -79,7 +79,7 @@ dgroups_key_binder = simple_key_binder("mod4")
 
 layout_theme = {"border_width": 5,
                 "margin": 6,
-               "border_focus": GREEN,
+               "border_focus": BLUE,
                 "border_normal": BLACK
                 }
 layouts = [
@@ -108,7 +108,7 @@ screens = [
 
                 widget.Spacer(length=15),
                 widget.CurrentLayoutIcon(),
-                widget.GroupBox(fontsize=15, this_current_screen_border=GREEN),
+                widget.GroupBox(fontsize=15, this_current_screen_border=BLUE),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -127,6 +127,7 @@ screens = [
                 widget.Spacer(length=15),
                 widget.Clock(format='%d %a %I:%M %p'),
                 widget.Spacer(length=15),
+                widget.Wallpaper(directory='~/Pictures/', label='^'),
             ],
             24,
 opacity=.7
