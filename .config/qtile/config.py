@@ -127,7 +127,6 @@ screens = [
                 widget.Spacer(length=15),
                 widget.Clock(format='%d %a %I:%M %p'),
                 widget.Spacer(length=15),
-                widget.Wallpaper(directory='~/Pictures/', label='^'),
             ],
             24,
 opacity=.7
