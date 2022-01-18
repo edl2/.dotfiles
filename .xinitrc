@@ -10,3 +10,4 @@ picom &
 xbindkeys
 nitrogen --restore &
 exec qtile start
+# exec cinnamon-session
