@@ -32,7 +32,7 @@ keys = [
     Key([mod], "m", lazy.spawn('"/home/el/Applications/Lunar Client-2.9.3.AppImage" --no-sandbox %U')),
     Key([mod], "b", lazy.spawn("chromium")),
     Key([mod], "f", lazy.spawn("pcmanfm")),
-    Key([mod], "o", lazy.spawn("wps")),
+    Key([mod], "o", lazy.spawn("onlyoffice-desktopeditors")),
     Key([mod], "q", lazy.spawn("clearine")),
     Key([mod], "c", lazy.spawn("discord")),
     
@@ -101,7 +101,7 @@ screens = [
 
                 widget.Spacer(length=15),
                 widget.CurrentLayoutIcon(),
-                widget.GroupBox(fontsize=15, this_current_screen_border=BLUE),
+                widget.GroupBox(fontsize=11, this_current_screen_border=BLUE),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
