@@ -8,5 +8,5 @@
 + bashrc  
 + xbindkeysrc  
 + xinitrc  
-+ dmenu  
++ dmenu/dwm/slstatus  
 + themes  
