@@ -8,7 +8,7 @@
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	pgrep qtile || startx
 fi
-alias anime='cd github/ani-cli/ && ./ani-cli'
+alias an='ani-cli'
 alias sp='ncspot'
 alias ..='cd ..'
 alias ls='ls --color=auto'
