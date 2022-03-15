@@ -1,0 +1,5 @@
+#!/bin/sh
+slstatus &
+picom &
+xbindkeys
+nitrogen --restore &
