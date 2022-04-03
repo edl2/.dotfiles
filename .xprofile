@@ -3,3 +3,4 @@ slstatus &
 picom &
 xbindkeys
 nitrogen --restore &
+exec dwm

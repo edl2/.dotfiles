@@ -10,5 +10,5 @@ picom &
 slstatus &
 xbindkeys
 nitrogen --restore &
-exec qtile start
+exec dwm
 # exec cinnamon-session
