@@ -8,15 +8,14 @@
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	pgrep qtile || startx
 fi
-alias an='ani-cli'
+alias an='cd github/ani-cli/ && ./ani-cli'
 alias sp='ncspot'
 alias ..='cd ..'
 alias ls='ls --color=auto'
 alias pm='pulsemixer'
 alias rn='ranger'
 alias qtile='vim .dotfiles/.config/qtile/config.py'
-alias mov='cd github/mov-cli && ./mov-cli'
-alias tv='cd github/mov-cli && python mov-cli\(with-eps\)prototype.py'
+alias mov='cd github/mov-cli/; python movcli\(prototype_witheps\).py'
 alias airpods='bluetoothctl connect 74:9E:AF:E7:E1:00'
 alias o='xdg-open'
 alias vpn='protonvpn-cli c -f'
