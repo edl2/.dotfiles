@@ -11,7 +11,7 @@ settings:
   completion.web_history.max_items:
     global: 0
   content.blocking.method:
-    global: auto
+    global: both
   content.geolocation:
     https://www.livingspaces.com: false
   content.notifications.enabled:
@@ -27,5 +27,9 @@ settings:
     global: 800
   tabs.tooltips:
     global: false
+  url.default_page:
+    global: https://www.startpage.com
+  url.start_pages:
+    global: https://www.startpage.com
   window.hide_decoration:
     global: true
